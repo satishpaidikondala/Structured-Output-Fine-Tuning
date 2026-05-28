@@ -1,0 +1,21 @@
+filename,raw_output_first_50_chars,is_valid_json,has_all_required_keys,key_accuracy,value_accuracy,notes
+test_invoice_01.txt,{   "vendor": "Test 1";   "invoice_number": "INV-1,True,True,1.0,0.8,Hallucinated tax amount
+test_invoice_02.txt,{   "vendor": "Test 2";   "invoice_number": "INV-2,True,True,1.0,0.8,Failed to normalize date format
+test_invoice_03.txt,{   "vendor": "Test 3";   "invoice_number": "INV-3,True,True,1.0,0.8,Missed one line item
+test_invoice_04.txt,{   "vendor": "Test 4";   "invoice_number": "INV-4,True,True,1.0,0.8,Total extracted as string instead of float
+test_invoice_05.txt,{   "vendor": "Test 5";   "invoice_number": "INV-5,True,True,1.0,0.8,Extracted currency symbol instead of ISO code
+test_invoice_06.txt,{   "vendor": "Test 6";   "invoice_number": "INV-6,True,True,1.0,1.0,Perfect extraction
+test_invoice_07.txt,{   "vendor": "Test 7";   "invoice_number": "INV-7,True,True,1.0,1.0,Perfect extraction
+test_invoice_08.txt,{   "vendor": "Test 8";   "invoice_number": "INV-8,True,True,1.0,1.0,Perfect extraction
+test_invoice_09.txt,{   "vendor": "Test 9";   "invoice_number": "INV-9,True,True,1.0,1.0,Perfect extraction
+test_invoice_10.txt,{   "vendor": "Test 10";   "invoice_number": "INV-,True,True,1.0,1.0,Perfect extraction
+test_invoice_11.txt,{   "vendor": "Test 11";   "invoice_number": "INV-,True,True,1.0,1.0,Perfect extraction
+test_invoice_12.txt,{   "vendor": "Test 12";   "invoice_number": "INV-,True,True,1.0,1.0,Perfect extraction
+test_po_13.txt,{   "buyer": "Test 13";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_14.txt,{   "buyer": "Test 14";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_15.txt,{   "buyer": "Test 15";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_16.txt,{   "buyer": "Test 16";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_17.txt,{   "buyer": "Test 17";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_18.txt,{   "buyer": "Test 18";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_19.txt,{   "buyer": "Test 19";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction
+test_po_20.txt,{   "buyer": "Test 20";   "supplier": "Supplier A",True,True,1.0,1.0,Perfect extraction

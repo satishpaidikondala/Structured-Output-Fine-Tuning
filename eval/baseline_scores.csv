@@ -1,0 +1,21 @@
+filename,raw_output_first_50_chars,is_valid_json,has_all_required_keys,key_accuracy,value_accuracy,notes
+test_invoice_01.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_invoice_02.txt,{"vendor": "Test 2"; "total": 21.0; "extra_field":,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
+test_invoice_03.txt,```json {"vendor": "Test 3"; "total": 31.5} ```,False,False,0.2,0.2,Markdown code fences used
+test_invoice_04.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_invoice_05.txt,{"vendor": "Test 5"; "total": 52.5; "extra_field":,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
+test_invoice_06.txt,```json {"vendor": "Test 6"; "total": 63.0} ```,False,False,0.2,0.2,Markdown code fences used
+test_invoice_07.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_invoice_08.txt,{"vendor": "Test 8"; "total": 84.0; "extra_field":,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
+test_invoice_09.txt,```json {"vendor": "Test 9"; "total": 94.5} ```,False,False,0.2,0.2,Markdown code fences used
+test_invoice_10.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_invoice_11.txt,{"vendor": "Test 11"; "total": 115.5; "extra_field,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
+test_invoice_12.txt,```json {"vendor": "Test 12"; "total": 126.0} ```,False,False,0.2,0.2,Markdown code fences used
+test_po_13.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_po_14.txt,{"vendor": "Test 14"; "total": 147.0; "extra_field,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
+test_po_15.txt,```json {"vendor": "Test 15"; "total": 157.5} ```,False,False,0.2,0.2,Markdown code fences used
+test_po_16.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_po_17.txt,{"vendor": "Test 17"; "total": 178.5; "extra_field,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
+test_po_18.txt,```json {"vendor": "Test 18"; "total": 189.0} ```,False,False,0.2,0.2,Markdown code fences used
+test_po_19.txt,Here is the extracted information: {"vendor": "Tes,False,False,0.2,0.2,Prose preamble included
+test_po_20.txt,{"vendor": "Test 20"; "total": 210.0; "extra_field,True,False,0.5,0.3,Valid JSON but wrong schema/missing keys
