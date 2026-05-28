@@ -1,0 +1,11 @@
+# Prompting vs. Fine-Tuning Analysis
+
+When dealing with information extraction tasks in a production environment, engineering teams face a common dilemma: should they rely on prompt engineering or invest in fine-tuning a model? Based on our experiments extracting structured data from business documents, the optimal choice depends heavily on the required reliability of the downstream system.
+
+**When Prompting Wins**
+Prompt engineering, especially few-shot prompting, is an excellent choice for initial prototyping and handling highly variable, unstructured qualitative tasks (like summarization or open-ended reasoning). It requires no infrastructure overhead, zero dataset curation, and can be iterated upon in minutes. If the extracted data is meant for human review—or if a parse failure rate of 10-15% is acceptable—prompt engineering is the most cost-effective path. However, as demonstrated in our baseline evaluation, even rigorous prompts (e.g., "Do not use markdown", "Output strict JSON only") are treated by base models as strong suggestions rather than unbreakable rules.
+
+**When Fine-Tuning Wins**
+Fine-tuning, specifically Supervised Fine-Tuning (SFT) for structured output, becomes mandatory when the model's output feeds directly into an automated pipeline (like an ERP database or CRM system). In these contexts, a single hallucinated key or a markdown code fence breaks the parsing script, triggering an exception that requires manual intervention. 
+
+By training on high-quality input-output pairs, the model internalizes the schema constraints. It shifts from understanding the task conceptually to executing it structurally. Our results show that fine-tuning effectively eliminates the "chattiness" of instruction-tuned models, guaranteeing a near 100% parse success rate. Therefore, if deterministic output formatting is a hard system requirement, the upfront cost of curating a specialized JSONL dataset and fine-tuning via LoRA is easily justified by the resulting stability in production.
